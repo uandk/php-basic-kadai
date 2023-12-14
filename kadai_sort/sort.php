@@ -9,26 +9,24 @@
 <body>
     <p>
         <?php
-        function sort_2ways($order){
-
-          $array=[15,4,18,23,10];
-
+        function sort_2ways($array,$order){
           if($order){
             echo "昇順にソートします。<br>";
             sort($array);
-            foreach($array as $nums){
-              echo $nums . '<br>';
+            foreach($array as $num){
+              echo $num . '<br>';
           }}else{
             echo "降順にソートします。<br>";
             rsort($array);
-            foreach($array as $nums){
-              echo $nums . '<br>';
+            foreach($array as $num){
+              echo $num . '<br>';
             }
           }
         }
 
-        sort_2ways(TRUE);
-        sort_2ways(FALSE);
+        $array = [15,4,18,23,10];
+        sort_2ways($array,TRUE);
+        sort_2ways($array,FALSE);
         ?>
     </p>
 </body>
